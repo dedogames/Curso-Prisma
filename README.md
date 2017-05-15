@@ -1,4 +1,4 @@
-[![](http://www.i9nagi.org.br/wp-content/uploads/2013/06/PrismaFS_360.png)](http://prismafs.com.br/)
+[![](http://www.prismafs.com.br/wp-content/themes/prisma/img/logo.png)](http://prismafs.com.br/)
 
 [PrismaFS](https://github.com/dedogames/Curso-Prisma) | [addons](https://github.com/HaxeFlixel/flixel-addons) | [ui](https://github.com/HaxeFlixel/flixel-ui) | [demos](https://github.com/HaxeFlixel/flixel-demos) | [tools](https://github.com/HaxeFlixel/flixel-tools) | [templates](https://github.com/HaxeFlixel/flixel-templates) | [docs](https://github.com/HaxeFlixel/flixel-docs) | [haxeflixel.com](https://github.com/HaxeFlixel/haxeflixel.com)
 
