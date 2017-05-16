@@ -6,7 +6,7 @@
 
 
 A Ordem dos quadrantes são importantes para setar a variavel ordemDeExibicaoDosQuadrantes, pois se o primeiro quadrante for 3, a ordem do array ficará [3,2,1,4]. A questão(pergunta) deve ficar no quadrante inicial, ou sej, 3 neste caso.
-![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4325ef97-9128-43a5-b00f-50b50e9e6337.png)
+![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4325ef97-9128-43a5-b00f-50b50e9e6337.png) 
 
 O timer sempre movimenta no sentindo horário(clockwise)
 ![](https://www.mathsisfun.com/geometry/images/clockwise.gif)
@@ -55,18 +55,6 @@ var niveis:Array = [{nivel:1, correta:[0,3,4,1]},
 var game:GameOrient = new GameOrient(this, currentLevel, niveis, radioTimer, corLinhaMapa, corTimer, tempoExibicaoCadaQuadrante, chamandoAoTerminoDoJogo, ordemDeExibicaoDosQuadrantes, debugMode);
 ```
 
-## Basic Features
+## Relação das classes dentro de /src
 
-- Display thousands of moving objects
-- Basic collisions between objects
-- Group objects together for simplicity
-- Easily generate and emit particles
-- Create game levels using tilemaps
-- Text display, save games, scrolling
-- Mouse, keyboard, controller, and touch inputs
-- Math & color utilities
-- Record and play back replays
-- Powerful interactive debugger
-- Camera system for split screen
-- Pathfinding and following
-- Easy object recycling
+![](https://github.com/dedogames/Curso-Prisma/blob/86b9780c22120899a7063178786daeb141b16195/classe.png)
