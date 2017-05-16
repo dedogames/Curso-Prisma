@@ -63,5 +63,28 @@ var game:GameOrient = new GameOrient(this, currentLevel, niveis, radioTimer, cor
 ```
 
 ## Relação das classes dentro de /src
+ 
+<p align="center">
+  <img   src="https://github.com/dedogames/Curso-Prisma/blob/86b9780c22120899a7063178786daeb141b16195/classe.png">
+</p>
 
-![](https://github.com/dedogames/Curso-Prisma/blob/86b9780c22120899a7063178786daeb141b16195/classe.png)
+** main.fla **
+	Arquivo contendo bussola com mapa e a chamada a classe principal GameOrient, nesse arquivo há algumas variaveis setadas para 
+** GameOrient.as **
+	Classe contendo as funções principais que gerenciam os estados do jogo que são
+	- INIT 
+	- PLAY 
+	- SELECT 
+	- RESET  
+	- FINISH 
+	- DRAWMAP 
+	- PAUSE 
+	- FEEDBAC
+	asdf
+** Map.as **
+
+** Compass.as **
+
+** States.as **
+
+** Testes.as **
