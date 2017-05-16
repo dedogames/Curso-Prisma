@@ -5,7 +5,7 @@
 ## Clique no link para executar o link
 
 
- [Timer circular - Curso ID6687-Conduta](http://gameudi.com/prismafs/CursoID6687-Conduta-Bussola/)
+ * [Timer circular - Curso ID6687-Conduta](http://gameudi.com/prismafs/CursoID6687-Conduta-Bussola/)
 
- [ Simulando Tetris - Curso ID6698 Introducao a Lideranca](http://gameudi.com/prismafs/CursoID6698-Introducao-a-Lideranca-Tetris/)
+* [ Simulando Tetris - Curso ID6698 Introducao a Lideranca](http://gameudi.com/prismafs/CursoID6698-Introducao-a-Lideranca-Tetris/)
 
