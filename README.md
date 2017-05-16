@@ -4,7 +4,9 @@
 
 ## Curso ID 6687 - Conduta - Bussola  - Action Script 2
 
-![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4325ef97-9128-43a5-b00f-50b50e9e6337.png) 
+<p align="center">
+  <img width="460" height="300" src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4325ef97-9128-43a5-b00f-50b50e9e6337.png">
+</p>
 
 A Ordem dos quadrantes são importantes para setar a variavel ordemDeExibicaoDosQuadrantes, pois se o primeiro quadrante for 3, a ordem do array ficará [3,2,1,4]. A questão(pergunta) deve ficar no quadrante inicial, ou sej, 3 neste caso.
 
