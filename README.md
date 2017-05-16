@@ -2,65 +2,58 @@
 
 
 
-## Curso ID 6687 - Conduta - Bussola
+## Curso ID 6687 - Conduta - Bussola  - Action Script 2
 
-[Click here to get started making games with HaxeFlixel.](http://haxeflixel.com/documentation/getting-started/)
 
-HaxeFlixel is open source software developed by volunteers, [click here to meet the team!](https://github.com/orgs/HaxeFlixel/people)
+A Ordem dos quadrantes são importantes para setar a variavel ordemDeExibicaoDosQuadrantes, pois se o primeiro quadrante for 3, a ordem do array ficará [3,2,1,4]. A questão(pergunta) deve ficar no quadrante inicial, ou sej, 3 neste caso.
+![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4325ef97-9128-43a5-b00f-50b50e9e6337.png)
 
-If you're a developer and like what we're doing, [read the docs](#for-developers) and get involved.
+O timer sempre movimenta no sentindo horário(clockwise)
+![](https://www.mathsisfun.com/geometry/images/clockwise.gif)
 
-## Links
+Caso o usuário erre a primeira questão , ainda haverá duas chances, caso o usuário erro mesmo na terceira tentativa, é reiniciado no primeiro frame no nivel atual.
 
-In case you're looking for resources, help, or just want to interact with the community:
+Devido a fragmentação dos niveis em flash separados, não foi implementado os niveis corridos, portanto é necessário setar o nivel atual.
+Dentro do arquivo main.fla há algumas variaveis, abaixo há uma descrição das mesmas
 
-- [HaxeFlixel.com](http://www.haxeflixel.com/)
-  - [Forums](http://forum.haxeflixel.com/)
-  - [Docs](http://www.haxeflixel.com/documentation)
-  - [API](http://api.haxeflixel.com/)
-- [@HaxeFlixel on Twitter](https://twitter.com/HaxeFlixel)
-- [#haxeflixel IRC channel](http://webchat.freenode.net/?channels=haxeflixel)
+``` 
+var tempoExibicaoCadaQuadrante = 50;
+var ordemDeExibicaoDosQuadrantes = [2,1,4,3];  // a ordem deve seguir o circulo trigonométrico
+var radioTimer = 20;
+var corTimer = 0xFFFF00; Linha de contorno do circulo
+var corLinhaMapa = 0xFF00FF;
 
-## About
 
-HaxeFlixel was created by Alexander Hohlov, also known as [Beeblerox](https://github.com/beeblerox) who continues to be the project lead. The codebase started largely from a Haxe port of the [AS3 version of Flixel](https://github.com/AdamAtomic/flixel) written by [Adam “Atomic” Saltsman](http://www.adamatomic.com/) and [Richard Davey's](http://www.photonstorm.com/flixel-power-tools) [Power Tools](https://github.com/photonstorm/Flixel-Power-Tools)
+function chamandoAoTerminoDoJogo(instance:GameOrient)
+{
+	var map:Map = new Map(instance.mainStage["mc_map"],corLinhaMapa,2);
+	 
+	 Exemplo básico do desenho dos caminhos
+	var arr:Array = [
+						{mc_start:"mc_start" ,mc_finish:("mc_a"+(instance.compass.lastFrame-1))}
+						//,{mc_start:"mc_a1"    ,mc_finish:"mc_b3"},
+						//{mc_start:"mc_b3"    ,mc_finish:"mc_c2"},
+						//{mc_start:"mc_c2"    ,mc_finish:"mc_finish"}
+						];
+						
+	map.drawPath(arr);
+}
 
-Special thanks go to the community contributors [Werdn](https://github.com/werdn), [gamedevsam](https://github.com/gamedevsam), [impaler](https://github.com/impaler), [ProG4mr](https://github.com/ProG4mr), [Gama11](https://github.com/Gama11), [sergey-miryanov](https://github.com/sergey-miryanov) and more.
 
-HaxeFlixel presents substantial enhancements from the original Flixel AS3 code:
+setar para false quando for para produção esta variavel imprimie valores no trace 
+usando a classe de Logger
+var debugMode = true;
+var currentLevel = 1;
 
-- Use of a robust and powerful, open source language
-- Flexible Asset Management System
-- Cross-platform development for Linux, Mac and Windows
-- Texture Atlas and Layer enhancement for cpp targets
-- Integrated and robust Tween System
-- Access to OpenFL native extensions
-- Compile to Mobile and Desktop targets with native code through OpenFL
-- Impressive Native Performance using GPU accelerated drawTiles implementation on cpp targets
-- A powerful debugger with a console as well as an advanced logging system
-- A vibrant community that keeps updating the engine and adding new features to it
+var niveis:Array = [{nivel:1, correta:[0,3,4,1]}, 
+					{nivel:2, correta:[0,1,3,4]}, 
+					{nivel:3, correta:[0,1,3,4]}, 
+					{nivel:4, correta:[0,1,3,4]}
+				    ];
 
-## For Developers
-
-If you are wanting to contribute code, please review the following documentation:
-
-- [Install development flixel](http://haxeflixel.com/documentation/install-development-flixel/)
-- [Code Contributions](http://haxeflixel.com/documentation/code-contributions)
-- [Code Style](http://haxeflixel.com/documentation/code-style)
-
-If you have a question or have not contributed on GitHub before, there are friendly people in the community that help out in the [forums](http://haxeflixel.com/documentation/community/).
-
-For using git with GitHub we recommended using a GUI application to manage your changes, for example [SourceTree](http://www.sourcetreeapp.com/).
-
-## Runtime Targets
-The current possible targets are:
-
-| Mobile     | Desktop | Web   |
-|------------|---------|-------|
-| BlackBerry | Linux   | Flash |
-| iOS        | Mac     | HTML5 |
-| Android    | Windows |       |
-| WebOS      | Neko    |       |
+ Clase que contém a lógica do jogo 
+var game:GameOrient = new GameOrient(this, currentLevel, niveis, radioTimer, corLinhaMapa, corTimer, tempoExibicaoCadaQuadrante, chamandoAoTerminoDoJogo, ordemDeExibicaoDosQuadrantes, debugMode);
+```
 
 ## Basic Features
 
